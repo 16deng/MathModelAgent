@@ -10,6 +10,12 @@ MathModelAgent 核心模块
 - logger: 日志系统
 - evaluator: 评估器
 - memory_manager: 记忆管理器
+- graph_state: LangGraph状态机
+- graph_builder: LangGraph图编译器
+- jupyter_sandbox: Jupyter沙箱
+- data_profiler: 数据画像
+- asset_ledger: 资产账本
+- benchmark: 评测基准
 """
 
 from .code_executor import CodeExecutor, SafeCodeExecutor
@@ -20,8 +26,14 @@ from .context_manager import ContextManager, ContextWindow, ArchiveEntry
 from .logger import Logger, PerformanceLogger, get_logger, get_performance_logger
 from .evaluator import AgentEvaluator
 from .memory_manager import MemoryManager, Memory, MemoryLayer, MemoryValueEvaluator
+from .graph_state import GraphState
+from .graph_builder import MathModelGraph, GraphRunner
+from .jupyter_sandbox import StatefulJupyterKernel, ASTErrorParser
+from .data_profiler import DataProfiler, ModelRouter
+from .asset_ledger import AssetLedger
+from .benchmark import MathModelBench, TraceCollector
 
-__version__ = "1.0.0"
+__version__ = "2.0.0"
 __author__ = "16deng"
 
 __all__ = [
@@ -64,4 +76,24 @@ __all__ = [
     "Memory",
     "MemoryLayer",
     "MemoryValueEvaluator",
+    
+    # LangGraph状态机
+    "GraphState",
+    "MathModelGraph",
+    "GraphRunner",
+    
+    # Jupyter沙箱
+    "StatefulJupyterKernel",
+    "ASTErrorParser",
+    
+    # 数据画像
+    "DataProfiler",
+    "ModelRouter",
+    
+    # 资产账本
+    "AssetLedger",
+    
+    # 评测基准
+    "MathModelBench",
+    "TraceCollector",
 ]
