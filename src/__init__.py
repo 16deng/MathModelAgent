@@ -9,6 +9,7 @@ MathModelAgent 核心模块
 - context_manager: 上下文管理
 - logger: 日志系统
 - evaluator: 评估器
+- memory_manager: 记忆管理器
 """
 
 from .code_executor import CodeExecutor, SafeCodeExecutor
@@ -18,6 +19,7 @@ from .session_manager import SessionManager, Session, SessionEvent, EventType
 from .context_manager import ContextManager, ContextWindow, ArchiveEntry
 from .logger import Logger, PerformanceLogger, get_logger, get_performance_logger
 from .evaluator import AgentEvaluator
+from .memory_manager import MemoryManager, Memory, MemoryLayer, MemoryValueEvaluator
 
 __version__ = "1.0.0"
 __author__ = "16deng"
@@ -56,4 +58,10 @@ __all__ = [
     
     # 评估器
     "AgentEvaluator",
+    
+    # 记忆管理器
+    "MemoryManager",
+    "Memory",
+    "MemoryLayer",
+    "MemoryValueEvaluator",
 ]
