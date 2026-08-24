@@ -11,8 +11,7 @@ from pathlib import Path
 # 添加项目路径
 sys.path.insert(0, str(Path(__file__).parent))
 
-from src.code_executor import CodeExecutor
-from src.template_manager import TemplateManager, CumcmTemplate, McmIcmTemplate
+from src import CodeExecutor, TemplateManager, CumcmTemplate, McmIcmTemplate
 
 
 # 页面配置
